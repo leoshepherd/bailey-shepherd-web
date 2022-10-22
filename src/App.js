@@ -22,7 +22,9 @@ function App() {
       </nav>
       <main>
         <article>
-          <div class="article-image article-section"></div>
+          <div class="article-image article-section">
+            <img src="./article-assets/pexels-donatello-trisolino-1371724.jpg" alt="motorcycle-image" id='motorcycle-image'/>
+          </div>
           <div class="article-description article-section"></div>
           <div class="article-title article-section"></div>
           <div class="article-nav article-section"></div>
