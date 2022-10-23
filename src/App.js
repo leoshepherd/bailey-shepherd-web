@@ -8,23 +8,31 @@ function App() {
       <nav>
         <div id="nav-logo" class="nav-element">
           <a href='#'>
-            <FontAwesomeIcon icon={faHouse} fontSize={"2.5rem"}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faHouse} fontSize={"2.5rem"}/>
           </a>
         </div>
         <div id="nav-link" class="nav-element">
           <a href='#'>ABOUT</a>
           <a href='#'>WORK</a>
         </div>
-        <div id="nav-social" class="nav-element"></div>
+        <div id="nav-social" class="nav-element">
+          <a href='#'>
+            <FontAwesomeIcon icon={faHouse} fontSize={"1.5rem"}/>
+          </a>
+          <a href='#'>
+            <FontAwesomeIcon icon={faHouse} fontSize={"1.5rem"}/>
+          </a>
+          <a href='#'>
+            <FontAwesomeIcon icon={faHouse} fontSize={"1.5rem"}/>
+          </a>
+        </div>
         <div id="nav-contact" class="nav-element">
           <a href='#'>CONTACT ME</a>
         </div>
       </nav>
       <main>
         <article>
-          <div class="article-image article-section">
-            <img src="./article-assets/pexels-donatello-trisolino-1371724.jpg" alt="motorcycle-image" id='motorcycle-image'/>
-          </div>
+          <div class="article-image article-section"></div>
           <div class="article-description article-section"></div>
           <div class="article-title article-section"></div>
           <div class="article-nav article-section"></div>
