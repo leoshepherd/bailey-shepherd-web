@@ -1,23 +1,67 @@
+:root{
+  --border-color: rgb(255,255,255,0.1);
+}
+
 main{
     flex-grow: 1;
+    position: relative;
   }
   
-  main > article {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr 1fr;
-  }
-  
-  main > article > .article-section {
-    height: 100%;
-    border: 1px solid var(--border-color);
-  }
-  
-  main > article > .article-image {
-    width: 100%;
-    height: 100%;
-    background-image: url("/public/article-assets/pexels-donatello-trisolino-1371724.jpg");
-    background-position: bottom right;
-    background-size: cover;
-  }
+main > article {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  position: absolute;
+
+  left: 0px;
+  top: 0px;
+}
+
+#motorcycle{
+  background-image: url("/public/article-assets/pexels-donatello-trisolino-1371724.jpg");
+  background-position: bottom right;
+  background-size: cover;
+}
+
+main > article[data-status="before"] {
+  transition-duration: .5s;
+  transform: translate(-100%);
+}
+
+main > article[data-status="active-from-before"] {
+  transform: translate(-100%);
+}
+
+main > article[data-status="active-from-after"] {
+  transform: translate(100%);
+}
+
+main > article[data-status="after"] {
+  transition-duration: .5s;
+  transform: translate(100%);
+}
+
+main > article[data-status="active"] {
+  transition-duration: .5s;
+}
+
+main > article > .article-section {
+  height: 100%;
+  border: 1px solid var(--border-color);
+}
+
+main > article > .article-image {
+  width: 100%;
+  height: 100%;
+}
+
+main > article > .article-nav {
+  display: flex;
+}
+
+.nav-button {
+  flex-basis: calc(100%/2);
+  border: 1px solid var(--border-color);
+}
