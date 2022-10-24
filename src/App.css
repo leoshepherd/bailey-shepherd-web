@@ -28,6 +28,7 @@ nav > .nav-element {
   border-left: 1px solid var(--border-color);
   align-items: center;
   justify-content: center;
+  background-color: black;
 }
 
 #nav-logo,
@@ -52,27 +53,13 @@ a,p{
 a{
   text-decoration: none;
 }
-
-main{
-  flex-grow: 1;
-}
-
-main > article {
-  display: grid;
-  height: 100%;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 2fr 1fr;
-}
-
-main > article > .article-section {
-  height: 100%;
-  border: 1px solid var(--border-color);
-}
-
-main > article > .article-image {
-  width: 100%;
-  height: 100%;
-  background-image: url("/public/article-assets/pexels-donatello-trisolino-1371724.jpg");
-  background-position: bottom left;
-  background-size: cover;
+button{
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: serif;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+  font-size: larger;
 }

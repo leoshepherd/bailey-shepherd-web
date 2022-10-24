@@ -1,43 +1,47 @@
 import './App.css';
+import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHouse} from "@fortawesome/free-solid-svg-icons"
+import { faGithub, faLinkedin, } from '@fortawesome/free-brands-svg-icons'
+import Home from './Home';
+import Work from './Work';
+import About from './About';
+
+
 
 function App() {
+  var pages = {
+    "home": <Home/>,
+    "work": <Work/>,
+    "about": <About/>
+  }
+  const [pageState, setPage] = useState('home');
+  let page = pages[pageState]
   return (
     <body>
       <nav>
         <div id="nav-logo" class="nav-element">
-          <a href='#'>
+          <button onClick={() => setPage('home')}>
             <FontAwesomeIcon icon={faHouse} fontSize={"2.5rem"}/>
-          </a>
+          </button>
         </div>
         <div id="nav-link" class="nav-element">
-          <a href='#'>ABOUT</a>
-          <a href='#'>WORK</a>
+          <button onClick={() => setPage('about')}>ABOUT</button>
+          <button onClick={() => setPage('work')}>WORK</button>
         </div>
         <div id="nav-social" class="nav-element">
-          <a href='#'>
-            <FontAwesomeIcon icon={faHouse} fontSize={"1.5rem"}/>
+          <a href='https://www.linkedin.com/in/bailey-shepherd-560500218'>
+            <FontAwesomeIcon icon={faLinkedin} fontSize={"2rem"}/>
           </a>
-          <a href='#'>
-            <FontAwesomeIcon icon={faHouse} fontSize={"1.5rem"}/>
-          </a>
-          <a href='#'>
-            <FontAwesomeIcon icon={faHouse} fontSize={"1.5rem"}/>
+          <a href='https://github.com/leoshepherd'>
+            <FontAwesomeIcon icon={faGithub} fontSize={"2rem"}/>
           </a>
         </div>
         <div id="nav-contact" class="nav-element">
-          <a href='#'>CONTACT ME</a>
+          <button onClick={() => setPage('home')}>CONTACT ME</button>
         </div>
       </nav>
-      <main>
-        <article>
-          <div class="article-image article-section"></div>
-          <div class="article-description article-section"></div>
-          <div class="article-title article-section"></div>
-          <div class="article-nav article-section"></div>
-        </article>
-      </main>
+      {page}
     </body>
   );
 }
